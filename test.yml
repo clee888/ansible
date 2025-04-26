@@ -6,7 +6,7 @@
     copy:
       dest: "/tmp/lee.txt"
       content:
-       Tottenham Hotspurs stadium
+       Tottenham Hotspurs stadium tonight \n
   #- name: Move file from tmp to home directory
   #  command: mv /tmp/lee.txt /home/clee/lee.txt
     
