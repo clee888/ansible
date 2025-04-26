@@ -6,24 +6,21 @@
     copy:
       dest: "/tmp/lee.txt"
       content:
-       Tottenham Hotspurs
-  - name: Move file from tmp to home directory
-    command: mv /tmp/lee.txt /home/clee/lee.txt
+       Tottenham Hotspurs stadium
+  #- name: Move file from tmp to home directory
+  #  command: mv /tmp/lee.txt /home/clee/lee.txt
     
-  - name: show result in shell
-    shell: echo "Tottenham" > /home/clee/spurs.txt
-    register: shell_output
+  #- name: show result in shell
+  #  shell: echo "Tottenham" > /home/clee/spurs.txt
+  #  register: shell_output
 
-  - name: Debug shell output
-    debug: var=shell_output
+  #- name: Debug shell output
+  #  debug: var=shell_output
       
     
 
  
- 
- 
- 
- 
+
  
  #  - name: Ping Host
  #    ansible.builtin.ping:
