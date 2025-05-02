@@ -1,0 +1,31 @@
+---
+- name: Create file and print message
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: Create file
+    command: touch /tmp/{{ item }}
+    loop:
+      - file1.txt
+      - file2.txt
+
+  - name: Print message
+    debug:
+      msg: File 1 copy ok
+    when: copy1 is ok  
+    notify: FileCopy   
+
+  handlers:
+    - name: FileCopy
+      copy:
+        src: /tmp/file1.txt
+        dest: /home/clee/file1.txt
+      register: copy1
+
+    - name: FileCopy2
+      copy:
+        src: /tmp/file2.txt
+        dest: /home/clee/file2.txt
+      register: copy2
+
+
